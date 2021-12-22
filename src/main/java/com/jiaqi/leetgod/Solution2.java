@@ -10,6 +10,7 @@ package com.jiaqi.leetgod;
  * 空间复杂度：O(1)，只需要额外的常数级别的空间。
  */
 public class Solution2 {
+    //动态规划
     public static int maxArea(int[] height) {
         int l = 0, r = height.length - 1;
         int ans = 0;

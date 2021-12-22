@@ -6,6 +6,7 @@ package com.jiaqi.leetgod;
  * 链接：https://leetcode-cn.com/problems/search-insert-position
  */
 class Solution {
+    //二分法
     public static int searchInsert(int[] nums, int target) {
         int n = nums.length;
         // 定义target在左闭右闭的区间，[low, high]
