@@ -10,10 +10,11 @@ import java.util.Random;
  * 输入：nums = [5,2,3,1]
  * 输出：[1,2,3,5]
  * https://leetcode-cn.com/problems/sort-an-array/
+ * https://blog.csdn.net/albert_smith/article/details/106053033
  */
 class Solution6 {
     public static void main(String[] args) {
-        int[] nums = {5,2,3,1};
+        int[] nums = {5,2,3,1,7,2,9,15,66,89,34,111,3};
         sortArray(nums);
         System.out.println(JSON.toJSONString(nums));
     }
