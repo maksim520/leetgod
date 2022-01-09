@@ -38,8 +38,8 @@ public class ArraySort {
                 System.out.println(JSON.toJSONString(arr));
             }
 
-            qSort(arr, s, r);
-            qSort(arr, r + 1, e);
+            qSortZjq(arr, s, r);
+            qSortZjq(arr, r + 1, e);
         }
     }
 
@@ -60,6 +60,7 @@ public class ArraySort {
                 if (l < r) {
                     arr[r] = arr[l];
                 }
+                System.out.println(JSON.toJSONString(arr));
             }
             arr[l] = temp;
             qSort(arr, s, l);
