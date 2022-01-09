@@ -4,8 +4,8 @@ import com.alibaba.fastjson.JSON;
 
 public class ArraySort {
     public static void main(String[] args) {
-        int[] nums = {5,2,3,1,7,2,9,15,66,89,34,111,3};
-        qSort(nums,0,nums.length-1);
+        int[] nums = {5, 2, 3, 1, 7, 2, 9, 15, 66, 89, 34, 111, 3};
+        qSort(nums, 0, nums.length - 1);
         //selectSort(nums);
         // insertSort(nums);
         // shellSort(nums);
@@ -19,6 +19,30 @@ public class ArraySort {
     /**
      * 快速排序
      **/
+    static void qSortZjq(int[] arr, int s, int e) {
+        int l = s, r = e;
+        if (l < r) {
+            int temp = arr[l];
+            while (l < r) {
+                while (l < r && arr[r] >= temp) {
+                    r--;
+                }
+                while (l < r && arr[l] <= temp) {
+                    l++;
+                }
+                if (l < r) {
+                    swap(arr, r, l);
+                }else{
+                    swap(arr, r, s);
+                }
+                System.out.println(JSON.toJSONString(arr));
+            }
+
+            qSort(arr, s, r);
+            qSort(arr, r + 1, e);
+        }
+    }
+
     static void qSort(int[] arr, int s, int e) {
         int l = s, r = e;
         if (l < r) {
@@ -43,6 +67,11 @@ public class ArraySort {
         }
     }
 
+    private static void swap(int[] nums, int i, int j) {
+        int temp = nums[i];
+        nums[i] = nums[j];
+        nums[j] = temp;
+    }
     /**
      * 选择排序
      **/
