@@ -5,7 +5,7 @@ import com.alibaba.fastjson.JSON;
 public class ArraySort {
     public static void main(String[] args) {
         int[] nums = {5, 2, 3, 1, 7, 2, 9, 15, 66, 89, 34, 111, 3};
-        qSort(nums, 0, nums.length - 1);
+        qSortZjq(nums, 0, nums.length - 1);
         //selectSort(nums);
         // insertSort(nums);
         // shellSort(nums);
