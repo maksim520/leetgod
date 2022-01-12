@@ -18,6 +18,7 @@ public class ArraySort {
 
     /**
      * 快速排序
+     * https://blog.csdn.net/albert_smith/article/details/106053033
      **/
     static void qSortZjq(int[] arr, int s, int e) {
         int l = s, r = e;
@@ -43,6 +44,7 @@ public class ArraySort {
         }
     }
 
+    //https://blog.csdn.net/elma_tww/article/details/86164674
     static void qSort(int[] arr, int s, int e) {
         int l = s, r = e;
         if (l < r) {
