@@ -30,6 +30,8 @@ public class Solution7 {
             return ret;
         }
         Queue<TreeNode> queue = new LinkedList<TreeNode>();
+        //Queue 中 add() 和 offer()都是用来向队列添加一个元素。
+        //在容量已满的情况下，add() 方法会抛出IllegalStateException异常，offer() 方法只会返回 false 。
         queue.offer(root);
         while (!queue.isEmpty()) {
             List<Integer> level = new ArrayList<Integer>();
@@ -50,10 +52,12 @@ public class Solution7 {
     }
 
     public static void main(String[] args) {
-        TreeNode listNode9 = new TreeNode(9,null,null);
         TreeNode listNode15 = new TreeNode(15,null,null);
         TreeNode listNode7 = new TreeNode(7,null,null);
+        TreeNode listNode4 = new TreeNode(4,null,null);
+        TreeNode listNode8 = new TreeNode(8,null,null);
         TreeNode listNode20 = new TreeNode(20,listNode15,listNode7);
+        TreeNode listNode9 = new TreeNode(9,listNode4,listNode8);
         TreeNode listNode3 = new TreeNode(3,listNode9,listNode20);
         List<List<Integer>> lists = levelOrder(listNode3);
         System.out.println(lists.toString());
