@@ -32,8 +32,12 @@ class Solution6 {
     }
 
     public static int randomizedPartition(int[] nums, int l, int r) {
+        System.out.println("================================");
+        System.out.println(JSON.toJSONString(nums));
         int i = new Random().nextInt(r - l + 1) + l; // 随机选一个作为我们的主元
+        System.out.println("当前主元是第" + i + "个：" + nums[i]);
         swap(nums, r, i);
+        System.out.println(JSON.toJSONString(nums));
         return partition(nums, l, r);
     }
 
@@ -44,9 +48,11 @@ class Solution6 {
             if (nums[j] <= pivot) {
                 i = i + 1;
                 swap(nums, i, j);
+                System.out.println(JSON.toJSONString(nums));
             }
         }
         swap(nums, i + 1, r);
+        System.out.println(JSON.toJSONString(nums));
         return i + 1;
     }
 
