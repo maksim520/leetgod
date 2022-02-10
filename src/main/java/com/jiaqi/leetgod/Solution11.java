@@ -64,7 +64,7 @@ public class Solution11 {
     }
 
     public static void main(String[] args) {
-        int s = '1'- '0';//结果等于1，字符串1的16进制ASCII码是49，字符串0的16进制ASCII码是48，结果得到1。
+        int s = '1'- '0';//结果等于1，字符串1的10进制ASCII码是49，字符串0的10进制ASCII码是48，结果得到1。
         int i = compareVersion2("1.01", "1.001");
         System.out.println(i);
     }
