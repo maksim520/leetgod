@@ -45,11 +45,13 @@ public class Solution11 {
         int i = 0, j = 0;
         while (i < n || j < m) {
             int x = 0;
+            //遇到.for循环停止
             for (; i < n && version1.charAt(i) != '.'; ++i) {
                 x = x * 10 + version1.charAt(i) - '0';
             }
             ++i; // 跳过点号
             int y = 0;
+            //遇到.for循环停止
             for (; j < m && version2.charAt(j) != '.'; ++j) {
                 y = y * 10 + version2.charAt(j) - '0';
             }
